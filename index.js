@@ -1,13 +1,15 @@
 // server.js
 import express from 'express'
 const app = express();
-const port = "https://backend-rohan27s.vercel.app";
+const baseUrl = "https://backend-rohan27s.vercel.app";
 import auth from './routes/auth.js'
 import connectDb from './middleware/mongoose.js';
 import * as dotenv from 'dotenv' 
 dotenv.config()
 
 // Define a route
+app.set('baseUrl', baseUrl);
+
 const DATABASE_URL = process.env.DATABASE_URL;
 console.log(DATABASE_URL,'url')
 app.use(express.json());
@@ -17,6 +19,7 @@ app.get('/', (req, res) => {
 });
 app.use("/api/auth",auth);
 // Start the server
+const port = 3000
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
