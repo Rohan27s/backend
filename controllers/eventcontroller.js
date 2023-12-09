@@ -21,7 +21,7 @@ class EventController {
             // console.log(EventName,'e')
             // const neworder = new EventModel(req.body);
             // console.log(req.body,'b')
-            upload.multi('file')(req, res, async function (err) {
+            upload.array('file',6)(req, res, async function (err) {
                 if (err instanceof multer.MulterError) {
                     // A Multer error occurred when uploading.
                     console.error('Multer Error:', err);
