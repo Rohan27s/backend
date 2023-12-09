@@ -6,7 +6,7 @@ class EventController {
             const { EventName, Description, Time,Guests, Location,Duration,Attachments,Date, Notification, ReminderBefore } = req.body
             // console.log(EventName,'e')
             // const neworder = new EventModel(req.body);
-            console.log(req.body,'b')
+            // console.log(req.body,'b')
             const doc = new EventModel({
                 EventName: EventName,
                 Description: Description, 
