@@ -1,12 +1,14 @@
 // server.js
 import express from 'express'
-const app = express();
-const port = 3000;
+import express from 'express'
+import cors from 'cors'
 import auth from './routes/auth.js'
 import connectDb from './middleware/mongoose.js';
 import * as dotenv from 'dotenv' 
+const app = express();
+const port = 3000;
+app.use(cors());
 dotenv.config()
-
 // Define a route
 const DATABASE_URL = process.env.DATABASE_URL;
 console.log(DATABASE_URL,'url')
