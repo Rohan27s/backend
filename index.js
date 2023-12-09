@@ -1,7 +1,7 @@
 // server.js
 import express from 'express'
 const app = express();
-const port = 3000;
+const port = "https://backend-rohan27s.vercel.app";
 import auth from './routes/auth.js'
 import connectDb from './middleware/mongoose.js';
 import * as dotenv from 'dotenv' 
