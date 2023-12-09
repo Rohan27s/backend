@@ -1,6 +1,7 @@
 // server.js
 import express from 'express'
 import cors from 'cors'
+import path from 'path'
 import auth from './routes/auth.js'
 import connectDb from './middleware/mongoose.js';
 import * as dotenv from 'dotenv' 
